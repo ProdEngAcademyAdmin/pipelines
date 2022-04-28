@@ -1,0 +1,2 @@
+# pipelines
+JFrog Pipelines definitions
