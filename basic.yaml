@@ -5,9 +5,9 @@ resources:
     type: Image
     configuration:
       registry: art
-      sourceRepository: docker-local
-      imageName: trriplejay/simpleserver
-      imageTag: faketag
+      sourceRepository: default-docker-local
+      imageName: ctf
+      imageTag: 1.0
       autoPull: true
 
 
@@ -23,7 +23,7 @@ resources:
   #   type: GitRepo
   #   configuration:
   #     path: ~johns/simpleserver
-  #     gitProvider: johns_gh
+  #     gitProvider: GithubProdEngAcademyAdmin
   #     branches:
   #       include: ^dev.*$
   #       exclude: ^dev-9$
@@ -72,7 +72,7 @@ pipelines:
         type: Bash
         configuration:
           integrations:
-            - name: johns_gh
+            - name: GithubProdEngAcademyAdmin
           inputSteps:
             - name: basic_step
         execution:
@@ -98,7 +98,7 @@ pipelines:
         type: Bash
         configuration:
           integrations:
-            - name: johns_gh
+            - name: GithubProdEngAcademyAdmin
           inputSteps:
             - name: basic_step
         execution:
@@ -123,7 +123,7 @@ pipelines:
         configuration:
           affinityGroup: test_group
           integrations:
-            - name: johns_gh
+            - name: GithubProdEngAcademyAdmin
           inputSteps:
             - name: basic_step
           # inputResources:
@@ -149,7 +149,7 @@ pipelines:
         type: Bash
         configuration:
           integrations:
-            - name: johns_gh
+            - name: GithubProdEngAcademyAdmin
           inputSteps:
             - name: basic_step
         execution:
@@ -195,7 +195,7 @@ pipelines:
         type: Bash
         configuration:
           integrations:
-            - name: johns_gh
+            - name: GithubProdEngAcademyAdmin
           inputSteps:
             - name: basic_step
         execution:
