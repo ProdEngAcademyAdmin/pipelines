@@ -7,7 +7,7 @@ resources:
       registry: art
       sourceRepository: default-docker-local
       imageName: ctf
-      imageTag: 1.0
+      imageTag: "1.0"
       autoPull: true
 
 
